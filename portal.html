@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persist Ventures - Job Search and Career Accelerator</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #1a0b2e;
+            color: #fff;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; 
+            padding: 20px 0;
+        }
+        .header img {
+            width: 150px;
+        }
+        .right-section {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .tools {
+            color: #ffffff;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .login {
+            background-color: #7a00ff;
+            border: none;
+            border-radius: 20px;
+            color: #ffffff;
+            font-size: 18px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        
+        .main-title {
+            font-size: 2.5em;
+            margin: 20px 0;
+        }
+        .main-title span {
+            color: #c299fc;
+        }
+        .subtitle {
+            font-size : 1.2em;
+            margin: 10px 0;
+        }
+        .linkedin-check {
+            margin: 20px 0;
+        }
+        .linkedin-check input {
+            padding: 10px;
+            width: 300px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .linkedin-check button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #000;
+            color: #fff;
+            cursor: pointer;
+        }
+        .section-title {
+            font-size: 1.5em;
+            margin: 40px 0 20px;
+        }
+        .section-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .section-content img {
+            width: 400px;
+            border-radius: 20px;
+        }
+        .section-content p {
+            width: 50%;
+            text-align: left;
+            line-height: 1.6;
+        }
+        .partners {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+        .partners img {
+            width: 150px;
+            margin: 20px;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+        .testimonial {
+            width: 30%;
+            margin: 10px;
+            position: relative;
+        }
+        .testimonial img {
+            width: 100%;
+            border-radius: 20px;
+        }
+        .testimonial .name {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .faq {
+            margin: 40px 0;
+        }
+        .faq-item {
+            background-color: #2a1b4b;
+            margin: 10px 0;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .faq-item h3 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        .faq-item p {
+            display: none;
+            margin: 10px 0 0;
+        }
+
+ /* Tools Content Section */
+        .tools-content {
+            display: none;
+            background-color: #0f0f1e;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .section {
+            background-color: #0f0f1e;
+            border-radius: 10px;
+            padding: 20px;
+            width: 45%;
+        }
+        .section h2 {
+            color: #00ff00;
+            font-size: 24px;
+        }
+        .section h2.right {
+            color: #ff00ff;
+        }
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .section ul li {
+            margin-bottom: 20px;
+        }
+        .section ul li i {
+            margin-right: 10px;
+        }
+        .section ul li a {
+            color: #00ff00;
+            font-size: 18px;
+            text-decoration: none;
+        }
+        .section ul li a.right {
+            color: #ff00ff;
+        }
+        .section ul li p {
+            color: #cccccc;
+            font-size: 16px;
+            margin: 5px 0 0 28px;
+        }
+        .tools-container {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img height="50" src= "logo.png" width="150"/>
+            <div class="right-section">
+                <div class="tools" onclick="toggleTools()">Free Tools <i id="arrow" class="fas fa-chevron-down"></i></div>
+                <button class="login">Login</button>
+            </div>
+        </div>
+        <div class="tools-content" id="toolsContent">
+            <div class="tools-container">
+                <div class="section">
+                    <h2>For Job Searchers</h2>
+                    <ul>
+                        <li>
+                            <i class="fas fa-rocket"></i>
+                            <a href="https://get-a-job.persistventures.com/">Career Accelerator</a>
+                            <p>We teach you the skills to get a high paying job in tech !</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-star"></i>
+                            <a href="https://www.crackeddevs.com/projects">Discover New Products</a>
+                            <p>Discover the latest tools & products created every day!</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-file-alt"></i>
+                            <a href="https://www.crackeddevs.com/tools/resume-review">Resume Review</a>
+                            <p>Get detailed feedback on your resume in seconds.</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-file-alt"></i>
+                            <a href="https://www.crackeddevs.com/tools/cover-letter-generator">Cover Letter Generator</a>
+                            <p>Generate cover letters for specific jobs!</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-list"></i>
+                            <a href="https://www.crackeddevs.com/tools/recruiter-list">List of Recruiters</a>
+                            <p>A free list of emails of 1,000+ FAANG recruiters.</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-blog"></i>
+                            <a href="https://www.crackeddevs.com/blog">CrackedDevs Blog</a>
+                            <p>Read articles on job hunting, remote work, and more.</p>
+                        </li>
+                    </ul>
+                    
+                </div>
+                <div class="section">
+                    <h2 class="right">Build A Job Board</h2>
+                    <ul>
+                        <li>
+                            <i class="fas fa-code"></i>
+                            <a href="https://api.crackeddevs.com/" class="right">CrackedDevs API</a>
+                            <p>Create a jobs board with our API, for free.</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-search"></i>
+                            <a href="https://internshala.com/jobs/">Find Job</a>
+                            <p>Search for jobs that match your skills and preferences.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main-title">
+            The <span>Ultimate</span> Career Accelerator.
+        </div>
+        <div class="subtitle">
+            Achieve a $10k - $300k Salary Increase in Your Next Job
+        </div>
+        <div class="linkedin-check">
+            <p>Get A Free Check If You Are Eligible For Our Program Based On Your LinkedIn</p>
+            <input placeholder="Example: linkedin.com/in/michaelwebber" type="text"/>
+            <button>Check</button>
+        </div>
+        <p>Secure Your Dream Job with No Upfront Costs!</p>
+        <div class="section-title">
+            Hundreds apply to a job. What makes you special?
+        </div>
+        <div class="section-content">
+            <p>
+                Trust me, everyone has done the same preparation as you. Grinding Leetcode, coding bootcamps, etc. So what separates you from everyone else? It's not your coding skills, but knowing how to get the job.
+            </p>
+            <img alt="Group of People in Meeting" height="300" src="https://storage.googleapis.com/a1aa/image/Co7gMlE0LfRPWqUqcCFAcz9Da7XezMAg0RYEiTJGI6HH7OqTA.jpg" width="400"/>
+        </div>
+        <div class="partners">
+            <img alt="Startup College Logo" height="150" src="https://storage.googleapis.com/a1aa/image/TZf1BXtX7fidnUgKIkwvfeI2Lsdof1H5geVx 6O6Zdaiz0uj6E.jpg" width="150"/>
+            <img alt="Aiccelerator Logo" height="150" src="https://storage.googleapis.com/a1aa/image/04wnzRXID6qkClzzMjEKeE3NVUwx2wELOJltxGq9utYodH1JA.jpg" width="150"/>
+            <img alt="CCI Logo" height="150" src="https://storage.googleapis.com/a1aa/image/ocPTG84mUEqGAVGff79nHdEoaCDLIdLvHxc1rqaoXDqR7OqTA.jpg" width="150"/>
+            <img alt="CD Logo" height="150" src="https://storage.googleapis.com/a1aa/image/5ZjWtQrObwrNMldfahb6nZ0sOQ1NY4nIv2PLrVrNRT2kdH1JA.jpg" width="150"/>
+        </div>
+        <div class="testimonials">
+            <div class="testimonial">
+                <img alt="Rohit Testimonial" height="200" src="https://storage.googleapis.com/a1aa/image/2XBCAVoZ5f0DBK4T0szbd7NR1I8yfsMMMAbUVIXISOxK7OqTA.jpg" width="300"/>
+                <div class="name">Rohit S.</div>
+            </div>
+            <div class="testimonial">
+                <img alt="Aisha Testimonial" height="200" src="https://storage.googleapis.com/a1aa/image/XfuHpR8YQixqGC6nSxgpsbguNYeDS2RoyzeUeUlZBaXys7oOB.jpg" width="300"/>
+                <div class="name">Aisha V.</div>
+            </div>
+            <div class="testimonial">
+                <img alt="Vikram Testimonial" height="200" src="https://storage.googleapis.com/a1aa/image/4DMH9VU4fjxuWy8jmses3EXTEO2HZmwaNKG5KJmYjRsN7OqTA.jpg" width="300"/>
+                <div class="name">Vikram S.</div>
+            </div>
+        </div>
+        <div class="section-title">
+            Frequently Asked Questions
+        </div>
+        <div class="faq">
+            <div class="faq-item">
+                <h3>I am a junior/mid-level/senior developer. Is this program for me?</h3>
+                <p>Yes, this program is designed for developers at all levels.</p>
+            </div>
+            <div class="faq-item">
+                <h3>You give me an entire employee to help me?</h3>
+                <p>Yes, we provide dedicated support to help you through the process.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How long does it take to get a job with this program?</h3>
+                <p>The duration varies, but most participants secure a job within 3-6 months.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What does Persist Ventures get?</h3>
+                <p>We take a small percentage of your first-year salary once you secure a job.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Still have questions?</h3>
+                <p>Contact us at support@persistventures.com for more information.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => item.addEventListener('click', () => {
+            const paragraph = item.querySelector('p');
+            paragraph.style.display = paragraph.style.display === 'block' ? 'none' : 'block';
+        }));
+
+        function toggleTools() {
+            const toolsContent = document.getElementById('toolsContent');
+            const arrow = document .getElementById('arrow');
+            if (toolsContent.style.display === 'block') {
+                toolsContent.style.display = 'none';
+                arrow.classList.replace('fa-chevron-up', 'fa-chevron-down');
+            } else {
+                toolsContent.style.display = 'block';
+                arrow.classList.replace('fa-chevron-down', 'fa-chevron-up');
+            }
+        }
+    </script>
+</body>
+</html>
